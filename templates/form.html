@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{ title }}</title>
+</head>
+<body>
+
+<h1>{{ title }}</h1>
+
+<form>
+	<input name="query" placeholder="query" value="{{query}}">
+	<input type="submit" value="Search">
+</form>
+
+<ul>   
+{% for item in items %}
+<li><a href = "{{ item.url }}">{{ item.title }}</a> </li>
+{% else %}
+No search results
+{% endfor %}
+</ul>
+
+</body>
+</html>
